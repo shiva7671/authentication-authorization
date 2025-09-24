@@ -12,12 +12,13 @@ STATIC_DIR=BASE_DIR/"static"
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-i5i2l10+j!gx$#ao*buo-kuafgq=39u71ssqr6debtm!s#15%s'
+SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['https://transactionscredit.onrender.com']
+ALLOWED_HOSTS = ['transactionscredit.onrender.com']
 
 
 
@@ -42,7 +43,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware", #for render the website in render.com
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'authapp1.urls'
@@ -112,6 +112,10 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
 STATICFILES_DIRS=[STATIC_DIR]
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Render.com: Collect static on build
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

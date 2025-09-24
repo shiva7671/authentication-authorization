@@ -1,3 +1,3 @@
-gunicorn authapp1.wsgi:application
+gunicorn authapp1.wsgi
 
 
