@@ -1,0 +1,52 @@
+{% extends "navbar.html" %}
+
+{% load static %}
+
+{% block head_extra %}
+<link rel="stylesheet" href="{% static 'settlements.css' %}">
+{% endblock %}
+
+{% block body_block %}
+<div class="container">
+    <h2>Settlement Summary</h2>
+    <table class="settlements-table">
+        <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Settlement Date</th>
+                <th>Batch ID</th>
+                <th>Total Amount</th>
+                <th>Settled Amount</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example Data Rows -->
+            <tr>
+                <td>1</td>
+                <td>2025-09-18</td>
+                <td>SETT-1047</td>
+                <td>₹1,00,000</td>
+                <td>₹98,750</td>
+                <td><span class="status-completed">Completed</span></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2025-09-20</td>
+                <td>SETT-1052</td>
+                <td>₹60,000</td>
+                <td>₹58,200</td>
+                <td><span class="status-processing">Processing</span></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2025-09-23</td>
+                <td>SETT-1054</td>
+                <td>₹25,000</td>
+                <td>-</td>
+                <td><span class="status-pending">Pending</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

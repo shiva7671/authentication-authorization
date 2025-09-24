@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E-Seva</title>
+    <link rel="stylesheet" href="{% static 'navbar.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="/" class="navbar-logo">
+                <!-- Replace with your logo image or text -->
+                <img src="https://res.cloudinary.com/dykeae34v/image/upload/v1755849289/Logo_rhhchk.png" alt="Logo" class="logo-img" />
+                <span class="logo-text">E-Seva</span>
+            </a>
+            <ul class="navbar-links">
+                <li><a href="/">Home</a></li>
+                {% if current_user %}
+                <li><a href="/transactions/">Transactions</a></li>
+                <li><a href="/settlements/">Settlements</a></li>
+                <li><a href="/account/">Account</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="navbar-right">
+            {% if current_user %}
+            <form method="POST" action="/logout/" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn logout-btn">Logout</button>
+            </form>
+            {% else %}
+            <a href="/signup/" class="btn signup-btn">Signup</a>
+            <a href="/signin/" class="btn signin-btn">Signin</a>
+            {% endif %}
+        </div>
+    </nav>
+    {% block head_extra %}
+    {% endblock %}
+    {% block body_block %}
+
+    {% endblock %}
+</body>
+</html>

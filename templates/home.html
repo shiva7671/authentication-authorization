@@ -1,0 +1,53 @@
+{% extends "navbar.html" %}
+
+{% load static %}
+
+{% block head_extra %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
+
+{% block body_block %}
+<main>
+    <section class="home-hero">
+        <div class="hero-content">
+            <h1>Welcome to E-Seva</h1>
+            <p>Your trusted platform for secure and easy credit transactions, settlements, and account management.</p>
+            <a href="/" class="primary-btn">Get Started</a>
+        </div>
+        <div class="hero-image">
+            <!-- Decorative image (optional) -->
+            <img src="{% static 'images/image.png' %}" alt="E-Seva" />
+        </div>
+    </section>
+    <section class="features">
+        <h2>Why Choose E-Seva?</h2>
+        <div class="features-list">
+            <div class="feature-card">
+                <span>🔒</span>
+                <h3>Secure Transactions</h3>
+                <p>Bank-grade security to keep your funds and data safe.</p>
+            </div>
+            <div class="feature-card">
+                <span>⚡</span>
+                <h3>Fast Settlements</h3>
+                <p>Instant settlements with clear batch tracking for peace of mind.</p>
+            </div>
+            <div class="feature-card">
+                <span>📄</span>
+                <h3>Easy Statements</h3>
+                <p>Download and view your account statements anytime.</p>
+            </div>
+            <div class="feature-card">
+                <span>📞</span>
+                <h3>Support</h3>
+                <p>Friendly customer support for every transaction and query.</p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer-container">
+        <span>&copy; 2025 E-Seva. All rights reserved. | shiva8184951@gmail.com</span>
+    </div>
+</footer>
+{% endblock %}

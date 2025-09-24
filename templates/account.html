@@ -1,0 +1,48 @@
+{% extends "navbar.html" %}
+
+{% load static %}
+
+{% block head_extra %}
+<link rel="stylesheet" href="{% static 'account.css' %}">
+{% endblock %}
+
+{% block body_block %}
+<div class="account-container">
+    <h2>Account Information</h2>
+    <div class="account-card">
+        <div class="account-row">
+            <span class="account-label">Account Holder:</span>
+            <span class="account-value">Rahul Sharma</span>
+        </div>
+        <div class="account-row">
+            <span class="account-label">Account Number:</span>
+            <span class="account-value">XXXXX4512</span>
+        </div>
+        <div class="account-row">
+            <span class="account-label">Bank Name:</span>
+            <span class="account-value">State Bank of India</span>
+        </div>
+        <div class="account-row">
+            <span class="account-label">IFSC Code:</span>
+            <span class="account-value">SBIN0001234</span>
+        </div>
+        <div class="account-row">
+            <span class="account-label">Branch:</span>
+            <span class="account-value">Hyderabad Main</span>
+        </div>
+        <div class="account-row">
+            <span class="account-label">Account Type:</span>
+            <span class="account-value">Savings</span>
+        </div>
+        <div class="account-row">
+            <span class="account-label">Current Balance:</span>
+            <span class="account-value balance-credit">₹1,58,500.00</span>
+        </div>
+    </div>
+    <div class="account-actions">
+        <a href="/transactions/" class="action-btn">View Credit Transactions</a>
+        <button class="action-btn">Download Statement</button>
+    </div>
+</div>
+
+{% endblock %}

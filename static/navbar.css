@@ -1,0 +1,151 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2563eb; /* modern blue */
+    padding: 14px 3vw;
+    box-shadow: 0 4px 14px rgba(37,99,235,0.13);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    margin-right: 9px;
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    margin-left: 28px;
+}
+
+.navbar-links li a {
+    color: #e0e7ff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 13px;
+    border-radius: 6px;
+    transition: background 0.3s,color 0.3s;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a:focus {
+    background: #e0e7ff;
+    color: #2563eb;
+    outline: none;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 7px 24px;
+    font-size: 1rem;
+    border-radius: 28px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+    border: 2px solid transparent;
+}
+
+.signup-btn {
+    background: transparent;
+    color: #e0e7ff;
+    border: 2px solid #e0e7ff;
+}
+
+.signup-btn:hover,
+.signup-btn:focus {
+    background: #e0e7ff;
+    color: #2563eb;
+}
+
+.signin-btn {
+    background: #fbbf24;
+    color: #254021;
+    border: 2px solid #fbbf24;
+}
+
+.signin-btn:hover,
+.signin-btn:focus {
+    background: #f59e42;
+    color: #fff;
+    border-color: #f59e42;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .navbar-links {
+        gap: 12px;
+        margin-left: 13px;
+    }
+    .logo-text {
+        font-size: 1.1rem;
+    }
+    .btn {
+        padding: 6px 14px;
+        font-size: 0.92rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 4vw;
+    }
+    .navbar-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .navbar-logo, .navbar-links {
+        margin-left: 0;
+    }
+    .navbar-links {
+        flex-direction: column;
+        gap: 4px;
+    }
+    .navbar-right {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 7px;
+    }
+}
+
