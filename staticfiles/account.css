@@ -1,0 +1,85 @@
+/* Account.css */
+body {
+    background: #f5f7fb;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.account-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(60,87,157,0.13);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: #364F6B;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.account-card {
+    width: 100%;
+    background: #eaf2fb;
+    border-radius: 12px;
+    padding: 24px 20px 20px 20px;
+    box-shadow: 0 2px 8px rgba(60,87,157,0.09);
+    margin-bottom: 24px;
+}
+
+.account-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+    font-size: 1.04em;
+}
+
+.account-label {
+    color: #364F6B;
+    font-weight: 500;
+}
+
+.account-value {
+    color: #212529;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.balance-credit {
+    color: #08A045;
+    font-weight: bold;
+    font-size: 1.06em;
+    letter-spacing: 1px;
+}
+
+.account-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.action-btn {
+    background: linear-gradient(90deg, #364F6B 70%, #2473F5 100%);
+    color: #fff;
+    border: none;
+    text-decoration:none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(60,87,157,0.10);
+    transition: background 0.25s, transform 0.1s;
+}
+
+.action-btn:hover {
+    background: linear-gradient(90deg, #2473F5 60%, #364F6B 100%);
+    transform: translateY(-2px) scale(1.02);
+}

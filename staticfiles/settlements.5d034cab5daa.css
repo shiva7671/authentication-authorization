@@ -1,0 +1,78 @@
+/* settlements.css */
+body {
+    background: #f5f7fb;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(60,87,157,0.12);
+}
+
+h2 {
+    margin-bottom: 24px;
+    color: #364F6B;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.settlements-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(60,87,157,0.08);
+}
+
+.settlements-table th,
+.settlements-table td {
+    padding: 14px 10px;
+    text-align: left;
+}
+
+.settlements-table th {
+    background-color: #364F6B;
+    color: #fff;
+    font-weight: 500;
+    border-bottom: 2px solid #dbeafe;
+}
+
+.settlements-table tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+.settlements-table tbody tr:hover {
+    background-color: #eaf2fb;
+}
+
+.status-completed {
+    color: #08A045;
+    background: #eafaf1;
+    padding: 5px 14px;
+    border-radius: 24px;
+    font-size: 0.95em;
+    font-weight: 500;
+}
+
+.status-processing {
+    color: #2473F5;
+    background: #eafbff;
+    padding: 5px 14px;
+    border-radius: 24px;
+    font-size: 0.95em;
+    font-weight: 500;
+}
+
+.status-pending {
+    color: #FEA503;
+    background: #fff5da;
+    padding: 5px 14px;
+    border-radius: 24px;
+    font-size: 0.95em;
+    font-weight: 500;
+}
