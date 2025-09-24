@@ -17,7 +17,7 @@ SECRET_KEY = 'django-insecure-i5i2l10+j!gx$#ao*buo-kuafgq=39u71ssqr6debtm!s#15%s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['your-app-name.onrender.com']
+ALLOWED_HOSTS = ['https://transactionscredit.onrender.com']
 
 
 
